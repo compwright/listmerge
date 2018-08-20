@@ -1,0 +1,39 @@
+{
+  "name": "listmerge",
+  "version": "1.0.0",
+  "description": "Combines CSV files by searching for matching values",
+  "main": "index.js",
+  "bin": "./index.js",
+  "keywords": [
+    "csv",
+    "merge",
+    "combine",
+    "fuzzy",
+    "cli",
+    "stream",
+    "Elastic Search",
+    "Lucene",
+    "BM25"
+  ],
+  "author": "Jonathon Hill <jhill9693@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:compwright/listmerge"
+  },
+  "dependencies": {
+    "case": "^1.5.5",
+    "csv-parse": "^2.5.0",
+    "csv-stringify": "^3.1.1",
+    "d3-dsv": "^1.0.8",
+    "firstline": "^2.0.2",
+    "inquirer": "^6.1.0",
+    "lodash": "^4.17.10",
+    "wink-bm25-text-search": "^2.0.5",
+    "wink-nlp-utils": "^1.9.0",
+    "yargs": "^12.0.1"
+  }
+}
