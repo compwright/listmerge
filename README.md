@@ -22,8 +22,8 @@ $ npm install -g listmerge
 ## Usage
 
 ```
-$ node index.js --help
-index.js [sources] --output target.csv
+$ listmerge --help
+listmerge [sources] --output target.csv
 
 Options:
   --version  Show version number                                                       [boolean]
