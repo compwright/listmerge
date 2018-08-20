@@ -138,7 +138,9 @@ function matchFile(a, b) {
         const output = path.resolve(argv.output);
         const files = await getHeaders(argv._);
 
-        return;
+        if (files.length < 2) {
+            throw new Error('At least two source CSV files are required');
+        }
 
         // Configure the matching engine
         for (var i = 0; i < files.length; i++) {
