@@ -9,7 +9,7 @@ const toCsv = require('csv-stringify');
 const { csvParse } = require('d3-dsv');
 const firstline = require('firstline');
 const inquirer = require('inquirer');
-const { zip, zipObject, fill, pick, flatten } = require('lodash');
+const { zip, zipObject, fill, pick, flatten, fromPairs } = require('lodash');
 const engine = require('wink-bm25-text-search')();
 const nlpUtils = require('wink-nlp-utils');
 const yargs = require('yargs');
@@ -55,7 +55,7 @@ function loadSearchEngine(file) {
     return new Promise((resolve, reject) => {
         try {
             engine.defineConfig({
-                fldWeights: zipObject(file.selected, fill(Array(file.selected.length), 1))
+                fldWeights: file.weights
             });
               
             engine.definePrepTasks([
@@ -157,7 +157,22 @@ function matchFile(a, b) {
                             choices: file.headers
                         }
                     ]);
+                    const { weights } = await inquirer.prompt([
+                        {
+                            message: 'Indicate the relevance weight of each field',
+                            name: 'weights',
+                            type: 'editor',
+                            default: selected.map(s => s + ',1').join('\n'),
+                            filter: (str) => fromPairs(
+                                str.trim().split('\n').map(str => {
+                                    let [a, b] = csvParse(str).columns;
+                                    return [a, parseInt(b)];
+                                })
+                            )
+                        }
+                    ]);
                     file.selected = selected;
+                    file.weights = weights;
                 }
                 break;
 
