@@ -25,15 +25,15 @@
     "url": "github:compwright/listmerge"
   },
   "dependencies": {
-    "case": "^1.6.2",
-    "csv-parse": "^4.4.7",
-    "csv-stringify": "^5.3.3",
-    "d3-dsv": "^1.1.1",
+    "case": "^1.6.3",
+    "csv-parse": "^4.14.2",
+    "csv-stringify": "^5.5.3",
+    "d3-dsv": "^2.0.0",
     "firstline": "^2.0.2",
-    "inquirer": "^7.0.0",
-    "lodash": "^4.17.15",
+    "inquirer": "^7.3.3",
+    "lodash": "^4.17.20",
     "wink-bm25-text-search": "^3.0.1",
-    "wink-nlp-utils": "^2.0.5",
-    "yargs": "^14.0.0"
+    "wink-nlp-utils": "^2.0.6",
+    "yargs": "^16.2.0"
   }
 }
