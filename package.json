@@ -18,7 +18,7 @@
   "author": "Jonathon Hill <jhill9693@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "repository": {
     "type": "git",
@@ -26,14 +26,14 @@
   },
   "dependencies": {
     "case": "^1.6.3",
-    "csv-parse": "^4.14.2",
-    "csv-stringify": "^5.5.3",
+    "csv-parse": "^4.15.4",
+    "csv-stringify": "^5.6.2",
     "d3-dsv": "^2.0.0",
     "firstline": "^2.0.2",
-    "inquirer": "^7.3.3",
-    "lodash": "^4.17.20",
+    "inquirer": "^8.0.0",
+    "lodash": "^4.17.21",
     "wink-bm25-text-search": "^3.0.1",
     "wink-nlp-utils": "^2.0.6",
-    "yargs": "^16.2.0"
+    "yargs": "^17.0.1"
   }
 }
