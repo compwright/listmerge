@@ -1,9 +1,11 @@
 {
   "name": "listmerge",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Combines CSV files by searching for matching values",
   "main": "index.js",
-  "bin": "./index.js",
+  "bin": {
+    "listmerge": "index.js"
+  },
   "keywords": [
     "csv",
     "merge",
